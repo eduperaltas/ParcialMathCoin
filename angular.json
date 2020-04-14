@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "CriptomonedaWeb"
+    }
+  },
+  "defaultProject": "CriptomonedaWeb",
+  "cli": {
+    "analytics": "0b874a32-6896-4e21-ab90-402fcb786def"
+  }
 }
