@@ -1,0 +1,38 @@
+<div class="card" style="background-color: #c45858" [class.border-primary]="isSelectedBlock()">
+    <div class="card-body" >
+      <h5 class="card-title" >Bloque {{ getBlockNumber() }} <small *ngIf="block.previousHash == 0" >(Genesis block)</small></h5>
+    </div>
+
+     <ul class="list-group list-group-flush" style="background-color: #c45858">
+	    <li class="list-group-item"style="background-color: #c45858" >
+	    	<span class="">Hash</span>
+	    	<br>
+	    	<div class="text-truncate" [style.color]="'#' + block.hash.substring(0,6)">
+	    		<small>{{ block.hash }}</small>
+			</div>
+		
+			
+			<br>
+			<span class="">Hash previo</span>
+	    	<br>
+
+	    	<div class="text-truncate" [style.color]="'#' + block.previousHash.substring(0,6)">
+	    		<small>{{ block.previousHash }}</small>
+	    	</div>
+	    </li>
+
+	    <li class="list-group-item" style="background-color: #c45858" >
+	    	<span class="">Nonce</span><br>
+	    	<div class="text-truncate text-muted" >
+	    		<small style="color: white;">{{ block.nonce }}</small>
+	    	</div>
+	    </li>
+
+	    <li class="list-group-item" style="background-color: #c45858">
+	    	<span class="">Tiempo</span><br>
+	    	<div class="text-truncate text-muted">
+	    		<small style="color: white;">{{ block.timestamp }}</small>
+	    	</div>
+	    </li>
+	  </ul>
+  </div>

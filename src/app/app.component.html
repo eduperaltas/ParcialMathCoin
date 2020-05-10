@@ -1,7 +1,22 @@
-<nav class="navbar navbar-drark bg-dark">
-  <a class="navbar-brand" routerLink="/">
-    MathCoin
+<nav class="navbar navbar-light" style="background-color: transparent;">
+  <a class="navbar-brand" routerLink="/" style="color: white;">
+     MathCoin
   </a>
+
+  <div>
+    <button routerLink="/new/transaction/pending" class="btn btn-outline-light" *ngIf="thereArePendingTransactions()">
+      Transacciones pendientes
+      <span class="badge badge-light">{{blockchain.pendingTransactions.length}}</span>
+    </button>
+    &nbsp;
+    <button routerLink="/settings" class="btn btn-outline-light">
+      Configuracion
+    </button>
+    &nbsp;
+    <button routerLink="/new/transaction" class="btn btn-outline-light">
+      Nueva transaccion
+    </button>
+  </div>
 </nav>
 
 <router-outlet></router-outlet>

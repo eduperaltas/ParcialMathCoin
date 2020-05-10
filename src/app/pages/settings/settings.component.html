@@ -1,0 +1,21 @@
+<div class="container">
+  <h1>Configuracion</h1>
+  <p style="color: white;"></p>
+
+  <br>
+
+  <div class="form-group">
+    <label for="difficulty" style="color: white;">Dificultades</label>
+    <input type="number" class="form-control" id="difficulty" aria-describedby="difficultyHelp" [(ngModel)]="blockchain.difficulty">
+    
+  </div>
+
+  <br>
+
+  <div class="form-group" >
+    <label for="miningReward" style="color: white;">recompensa por minar</label>
+    <input type="number" class="form-control" id="miningReward" aria-describedby="miningRewardHelp" [(ngModel)]="blockchain.miningReward">
+    
+  </div>
+
+</div>
